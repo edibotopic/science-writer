@@ -1,0 +1,360 @@
+{
+//math and statistics
+    "Significant": {
+        "prefix": ["p-value S"],
+        "body": [" (*p < ${1|0.05,0.01,0.001|}*)"],
+        "description": "✍Prints a significant P value",
+        "scope": "markdown"
+    },
+
+    "Not significant": {
+        "prefix": ["p-value NS"],
+        "body": [" (*p > 0.05*)"],
+        "description": "✍Prints an insignificant P value",
+        "scope": "markdown"
+    },
+
+    "Mean value": {
+        "prefix": ["mean value"],
+        "body": [" $${1:value}±${2:stdev}$"],
+        "description": "✍Prints a mean with standard deviation",
+        "scope": "markdown"
+    },
+
+     "Math inline":{
+         "prefix": ["math inline"],
+         "body": [
+             " $ $0 $"
+         ],
+         "description": "✍Creates math expressions inline",
+         "scope": "markdown"
+     },
+
+    "Math ownline":{
+        "prefix": ["math ownline"],
+        "body": [
+            " $$ $0 $$"
+        ],
+        "description": "✍Create math expression on new line",
+        "scope": "markdown"
+    },
+
+//scientific units
+    "SI Units base":{
+        "prefix": ["Units base"],
+        "body": [
+            " ${1|s,m,kg,A,K,mol,cd|}"
+        ],
+        "description": "✍Base SI units for use within math block",
+        "scope": "markdown"
+    },
+
+    "SI Units special":{
+        "prefix": ["Units special"],
+        "body": [
+            " ${1|Hz,rad,rad.s^{-1},rad.s^{-2},sr,N,N.m,N.m^{-1},Pa,Pa.s,J,J.K^{-1},J.K^{-1}.kg^{-1},J.kg^{-1},W,W.m^{-2},W.m^{-1}.K^{-1},C,V,F,Ω,S,Wb,T,H,°C,lm,lx,Bq,Gy,Sv,kat|}"
+        ],
+        "description": "✍Derived SI units with special names for use within math block",
+        "scope": "markdown"
+    },
+
+    "SI Units derived common":{
+        "prefix": ["Units derived common"],
+        "body": [
+            " ${1|m^2,m^3,m^{-1},s^{-1},m.s{-1},m.s{-2},kg.m^{-3},m^3.kg^{-1},m^3.s^{-1},m^3.m^{-2}.s^{-1}|}"
+        ],
+        "description": "✍Derived SI units with special names for use within math block",
+        "scope": "markdown"
+    },
+
+    "SI Constants":{
+        "prefix": ["Constants"],
+        "body": [
+            " ${1|Δv_{Cs},c,h,e,k,N_A,K_{cd}|}"
+        ],
+        "description": "✍SI defining constants for use within math block",
+        "scope": "markdown"
+    },
+
+//todo: chemistry notation
+
+//citations
+    "Cite one end":{
+        "prefix": ["Cite one END"],
+        "body": [
+            " (${1:surname}, ${2:year})"
+        ],
+        "description": "✍Cite one author at end of line",
+        "scope": "markdown"
+    },
+
+    "Cite two end":{
+        "prefix": ["Cite two END"],
+        "body": [
+            " (${1:surname} & ${2:surname}, ${3:year})"
+        ],
+        "description": "✍Cite two authors at end of line",
+        "scope": "markdown"
+    },
+
+    "Cite three end":{
+        "prefix": ["Cite three END"],
+        "body": [
+            " (${1:surname}, ${2:surname} & ${3:snippet}, ${4:year})"
+        ],
+        "description": "✍Cite three authors at end of line",
+        "scope": "markdown"
+    },
+
+    "Cite many end":{
+        "prefix": ["Cite many END"],
+        "body": [
+            " (${1:surname} *et al.,* ${2:year})"
+        ],
+        "description": "✍Cite many authors at end of line",
+        "scope": "markdown"
+    },
+
+        "Cite one part":{
+        "prefix": ["Cite one PART"],
+        "body": [
+            " ${1:surname} (${2:year})"
+        ],
+        "description": "✍Cite one author as part of line",
+        "scope": "markdown"
+    },
+
+        "Cite two part":{
+        "prefix": ["Cite two PART"],
+        "body": [
+            " ${1:surname} & ${2:surname} (${3:year})"
+        ],
+        "description": "✍Cite two authors as part of line",
+        "scope": "markdown"
+    },
+
+        "Cite three part":{
+        "prefix": ["Cite three PART"],
+        "body": [
+            " ${1:surname}, ${2:surname} & ${3:snippet} (${4:year})"
+        ],
+        "description": "✍Cite three authors in middle of line",
+        "scope": "markdown"
+    },
+
+        "Cite many part":{
+        "prefix": ["Cite many PART"],
+        "body": [
+            " ${1:surname} *et al.* (${2:year})"
+        ],
+        "description": "✍Cite many authors in middle of line",
+        "scope": "markdown"
+    },
+
+//references
+   "Reference paper":{
+       "prefix": ["Ref paper"],
+       "body": [
+           "${1:Surname1, C.N., Surname2, C.N., and other authors}. (${2:year}). ${3:Title of paper}. *${4:Name of Journal}*, ${5:volume}: ${6:pages}."
+       ],
+       "description": "✍Reference a scientific paper",
+       "scope": "markdown"
+   },
+
+   "Reference book authored":{
+        "prefix": ["Ref book authored"],
+        "body": [
+            "${1:Surname1, C.N., Surname2, C.N., and other authors}. (${2:year}). *${3:Title of Book}*. *${4:Edition (if any)}*. ${5:Place of Publication}: ${6:Publisher Name}."
+        ],
+        "description": "✍Reference an authored book",
+        "scope": "markdown"
+    },
+
+    "Reference book chapter":{
+        "prefix": ["Ref book chapter"],
+        "body": [
+            "${1:Surname1, C.N., Surname2, C.N., and other authors}. (${2:year}). *${3:Title of Chapter}*, in *${4:Editor Initials then Surname(s)}*, ${5:Title of Book}, ${6:Edition (if any)}, ${7:Place of Publication}: ${8:Publisher Name}, ${9: page range}."
+        ],
+        "description": "✍Reference a chapter in an edited volume",
+        "scope": "markdown"
+    },
+
+//boilerplate
+    "Submission": {
+        "prefix": ["submit paper"],
+        "body": [
+            "---",
+            "date: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"",
+            "output: ${1|pdf,word|}_document",
+            "---",
+            "",
+            "Dear Editor,",
+            "",
+            "We submit our manuscript entitled *${2:Paper Title}*",
+            "",
+            "to be considered by your journal *${3:Journal Name}*",
+            "",
+            "${4|With kind regards,Best,Yours|}",
+            "&nbsp;",
+            "",
+            "${5|Dr,Prof|} ${6:Surname}",
+            "&nbsp;",
+            "",
+            "**${7:Workplace}**",
+            "",
+            "*${8:Institute, company or university}*",
+            "&nbsp;",
+            "",
+            "*email: ${9: email address}*"
+        ],
+        "description": "✍Boilerplate letter-to-editor for new submission",
+        "scope": "markdown"
+    },
+
+    "Reviewer responses": {
+        "prefix": ["response to reviewers"],
+        "body": [
+            "---",
+            "title: ${1:Title of my paper}",
+            "subtitle: ${2: Manuscript number}",
+            "date: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"",
+            "output: ${3|pdf,word|}_document",
+            "---",
+            "",
+            "Dear editor,",
+            "&nbsp;",
+            "",
+            "We thank the reviewers for taking time to review our manuscript.",
+            "",
+            "Please find below a list of ${4|our, my|} responses and rebuttals.",
+            "",
+            "Line numbers (*L1, L2...*) are used to refer to specific points in the text.",
+            "",
+            "${5|With kind regards,Best,Yours|}",
+            "&nbsp;",
+            "",
+            "${6|Dr,Prof|} ${7:Surname}",
+            "&nbsp;",
+            "",
+            "**Responses to Reviewer 1**",
+            "",
+            "<!-- insert copy of reviewer comments -->",
+            "${8: Response to reviewer}",
+            "&nbsp",
+            "",
+            "**Responses to reviewer 2**",
+            "",
+            "<!-- insert copy of reviewer comments -->",
+            "${9: Response to reviewer}",
+            "&nbsp;",
+            "",
+        ],
+        "description": "✍Boilerplate response to reviewers",
+        "scope": "markdown"
+    },
+
+    "Manuscript": {
+        "prefix": ["write manuscript"],
+        "body": [
+            "---",
+            "title: ${1: Title of my Paper}",
+            "subtitle: ${2: Subtitle of Paper (if any)}",
+            "author:",
+            "- ${3:Author One} ^[${4:Institution One}, ${5:author1@example.org}]",
+            "- ${6:Author Two} ^[${7:Institution Two}, ${8:author2@example.com}]",
+            "- ${9:Author Three} ^[${10:Institution Three}, ${11:author3@example.ie}]",
+            "abstract: \"${12:This is the abstract.}\"",
+            "output:",
+            "   ${13|pdf,word|}_document:",
+            "       toc: ${14|true,false|}",
+            "       number_sections: ${15|true,false|}",
+            "       highlight: tango",
+            "---",
+            "",
+            "\\newpage",
+            "",
+            "# Introduction",
+            "",
+            "${16:<content>}",
+            "",
+            "# Materials and Methods",
+            "",
+            "## Materials",
+            "",
+            "${18:<content>}",
+            "",
+            "## Methods",
+            "",
+            "${19:<content>}",
+            "",
+            "## Statistics",
+            "",
+            "# Results",
+            "",
+            "${20:<content>}",
+            "",
+            "# Discussion",
+            "",
+            "${21:<content>}",
+            "",
+            "# Conclusion",
+            "",
+            "${22:<content>}",
+            "",
+            "# Acknowledgements",
+            "",
+            "${23:<content>}",
+            "",
+            "# References",
+            "",
+            "${24:<content>}",
+            ""
+
+        ],
+        "description": "✍Boilerplate titlepage, abstract and manuscript body",
+        "scope": "markdown"
+    },
+
+        "Acknowledgements": {
+        "prefix": ["acknowledge"],
+        "body": [
+            "The ${1|author,authors|} wish to acknowledge funding provided by ${2: funding body}",
+            "",
+            "under the project code ${3: project code}.",
+            "",
+            "We also wish to acknowledge ${4: assistance from X} in ${5: activity Y}."
+        ],
+        "description": "✍Adds acknowledgments body",
+        "scope": "markdown"
+    },
+
+//tables and figures
+   "Table":{
+       "prefix": ["table"],
+       "body": [
+            "**Table ${1:number}.** ${2: Description of table}",
+            "| $0  |     |",
+            "| --- | --- |",
+            "|     |     |",
+       ],
+       "description": "✍Insert a basic table with cursor on header",
+       "scope": "markdown"
+   },
+
+   "Figure":{
+       "prefix": ["figure"],
+       "body": [
+           "<!--assumes folder named \"figures\" in project directory-->",
+           "![](figures/${1:figure_name}.${2|png,jpg,svg|})",
+           "",
+           "**Figure ${3:number}.** ${4: Description of figure}",
+           "",
+           "&nbsp;",
+           "",
+           "$0"
+       ],
+       "description": "✍Insert a figure with trailing white space",
+       "scope": "markdown"
+   }
+
+}
